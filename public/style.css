@@ -1,0 +1,144 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #151528;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 26px 15px;
+    background: #292952;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: 36px;
+}
+
+header p {
+    color: #d2d2ee;
+}
+
+main {
+    width: min(650px, 94%);
+    margin: 25px auto;
+}
+
+section {
+    background: #24243e;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px #0003;
+}
+
+label {
+    display: block;
+    margin: 16px 0 8px;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #555577;
+    border-radius: 9px;
+    background: #17172b;
+    color: white;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    border: 0;
+    border-radius: 9px;
+    background: #8b5cf6;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7545dc;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #44445f;
+    margin: 24px 0;
+}
+
+#meldung {
+    color: #fca5a5;
+}
+
+#qrCode {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#qrCode img {
+    width: 180px;
+    max-width: 100%;
+    padding: 8px;
+    background: white;
+    border-radius: 10px;
+}
+
+#bildBereich {
+    margin: 20px 0;
+    min-height: 180px;
+    padding: 12px;
+    display: grid;
+    place-items: center;
+    background: #17172b;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#bildBereich img {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+#timer {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#antworten button {
+    text-align: left;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+#rangliste li, #spielerListe li {
+    padding: 7px 0;
+}
+
+[hidden] {
+    display: none !important;
+}
