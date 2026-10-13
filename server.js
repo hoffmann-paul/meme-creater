@@ -136,6 +136,8 @@ function startRound(room) {
 
     room.phase = "writing";
     room.descriptions = new Map();
+    room.voteOptions = [];
+    room.optionAuthors = new Map();
 
     for (const player of room.players.values()) {
         player.description = null;
