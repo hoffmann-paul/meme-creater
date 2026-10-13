@@ -478,5 +478,5 @@ io.on("connection", socket => {
 });
 
 server.listen(PORT, "0.0.0.0", () => {
-    console.log(`Witzduell läuft auf Port ${PORT}`);
+    console.log(`Meme Creater läuft auf Port ${PORT}`);
 });
