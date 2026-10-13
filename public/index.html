@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Creater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Meme Creater</h1>
+    </header>
+    
+    <main>
+        <p id="meldung" role="status"></p>
+
+        <section id="startBereich">
+            <label for="benutzername">Dein Benutzername</label>
+            <input id="benutzername" maxlength="20"
+                    placeholder="z.b. Ben">
+
+            <button id="raumErstellen">Raum erstellen</button>
+
+            <hr>
+
+            <label for="raumcode">Raumcode</label>
+            <input id="raumcode" inputmode="numeric"
+                    maxlength="6" placeholder="123456">
+
+            <button id="raumBeitreten">Raum beitreten</button>
+        </section>
+
+        <section id="warteBereich" hidden>
+            <h2>Wartebereich</h2>
+            <p>Raumcode: <strong id="codeAnzeige"></strong></p>
+            <p>Teile diesen Code oder scanne den QR-Code.</p>
+            <div id="qrCode"></div>
+
+            <h3>Spieler</h3>
+            <ul id="spielerListe"></ul>
+
+            <button id="spielStarten" hidden>Spiel Starten</button>
+        </section>
+
+        <section id="spielBereich" hidden>
+            <h2 id="rundenAnzeige">Runde 1 von 10</h2>
+            <p id="phaseAnzeige">Warte auf das Spiel ...</p>
+            <p id="timer">--:--</p>
+
+            <div id="bildBereich"></div>
+
+            <div id="schreibBereich" hidden>
+                <label for="beschreibung">Dein Text.</label>
+                <textarea id="beschreibung" maxlength="200"
+                    placeholder="z.b. Gavriel bei McDonalds"></textarea>
+                <button id="beschreibungSenden">Abschicken</button>
+            </div>
+
+            <div id="abstimmung" hidden>
+                <h3>Welche Beschreibung ist die beste?</h3>
+                <p>Du kannst nicht für dich selbst abstimmen</p>
+                <div id="antworten"></div>
+            </div>
+
+            <div id="ergebnis" hidden>
+                <h3>Ergebnis dieser Runde</h3>
+                <div id="rundenErgebnis"></div>
+                <p id="naechsteRunde"></p>
+            </div>
+
+            <div id="spielEnde" hidden>
+                <h2>Spiel zuende!</h2>
+                <p id="gewinner"></p>
+            </div>
+
+            <h3>Rangliste</h3>
+            <ol id="rangliste"></ol>
+        </section>
+    </main>
+
+    <script src="soket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
