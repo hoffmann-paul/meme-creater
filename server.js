@@ -365,12 +365,6 @@ io.on("connection", socket => {
             }
         }
 
-        // Der Raum kann während der QR-Erzeugung verändert worden sein.
-        if (!rooms.has(code) || !rooms.get(code).players.size) {
-            rooms.delete(code);
-            return;
-        }
-
         joinRoom(socket, room, name, true, qrCode);
     });
 
